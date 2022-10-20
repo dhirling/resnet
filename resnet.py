@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import tensorflow.keras as keras
 
+
 def bn_relu(x):
   '''
   Performs BN and ReLU activation sequentially.
@@ -9,6 +10,7 @@ def bn_relu(x):
   x = keras.layers.BatchNormalization()(x)
   x = keras.layers.Activation('relu')(x)
   return x
+
 
 def conv_block(x, n_filters1, n_filters2, n_blocks, layer, initializer=keras.initializers.HeNormal()):
   '''
